@@ -1,8 +1,8 @@
 module("luci.controller.guest-wifi", package.seeall)
+--local i18n = require "luci.i18n"
 
 function index()
-	require("luci.i18n")
-	luci.i18n.loadc("guest-wifi")
+--	i18n.loadc("guest-wifi")
 	if not nixio.fs.access("/etc/config/guest-wifi") then
 		return
 	end
